@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bigstore-common" />
+        <module name="bigstore-dao" />
+        <module name="bigstore-goods-dao" />
+        <module name="bigstore-goods-interface" />
+        <module name="bigstore-goods-service" />
+        <module name="bigstore-manager-web" />
+        <module name="bigstore-pojo" />
+        <module name="bigstore-shop-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bigstore-common" target="1.8" />
+      <module name="bigstore-dao" target="1.8" />
+      <module name="bigstore-goods-dao" target="1.8" />
+      <module name="bigstore-goods-interface" target="1.8" />
+      <module name="bigstore-goods-service" target="1.8" />
+      <module name="bigstore-manager-web" target="1.8" />
+      <module name="bigstore-parent" target="1.8" />
+      <module name="bigstore-pojo" target="1.8" />
+      <module name="bigstore-shop-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -6,7 +6,7 @@ import com.sqt.pojo.TbItemCat;
 import java.util.List;
 
 /**
- * @Description:
+ * @Description: 商品分类服务类
  * @author: sqt(男，未婚) 微信:810548252
  * @Date: Created in 2018-11-19  11:22
  */

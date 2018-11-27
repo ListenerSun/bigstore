@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ItemMapper">
+	<insert id="add" parameterType="com.sqt.pojo.TbItem">
+		 insert into tb_item ( title, sell_point,
+	      price, stock_count, num,
+	      barcode, image, categoryId,
+	      status, create_time, update_time,
+	      item_sn, cost_pirce, market_price,
+	      is_default, goods_id, seller_id,
+	      cart_thumbnail, category, brand,
+	      spec, seller)
+	    values ( #{title,jdbcType=VARCHAR}, #{sellPoint,jdbcType=VARCHAR},
+	      #{price,jdbcType=DECIMAL}, #{stockCount,jdbcType=INTEGER}, #{num,jdbcType=INTEGER},
+	      #{barcode,jdbcType=VARCHAR}, #{image,jdbcType=VARCHAR}, #{categoryid,jdbcType=BIGINT},
+	      #{status,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP},
+	      #{itemSn,jdbcType=VARCHAR}, #{costPirce,jdbcType=DECIMAL}, #{marketPrice,jdbcType=DECIMAL},
+	      #{isDefault,jdbcType=VARCHAR}, #{goodsId,jdbcType=BIGINT}, #{sellerId,jdbcType=VARCHAR},
+	      #{cartThumbnail,jdbcType=VARCHAR}, #{category,jdbcType=VARCHAR}, #{brand,jdbcType=VARCHAR},
+	      #{spec,jdbcType=VARCHAR}, #{seller,jdbcType=VARCHAR})
+	</insert>
+</mapper>

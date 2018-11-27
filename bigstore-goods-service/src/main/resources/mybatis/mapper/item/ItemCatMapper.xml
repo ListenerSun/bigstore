@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ItemCatMapper">
+    <!--根据父类id查询商品分类-->
+    <select id="findByParentId" resultType="com.sqt.pojo.TbItemCat" parameterType="long">
+        SELECT
+          `id`,
+          `parent_id`,
+          `name`,
+          `type_id`
+        FROM
+         `tb_item_cat`
+        WHERE  parent_id = #{id}
+    </select>
+    <!--根据id查询-->
+    <select id="findById" resultType="com.sqt.pojo.TbItemCat" parameterType="long">
+        SELECT
+          `id`,
+          `parent_id`,
+          `name`,
+          `type_id`
+        FROM
+         `tb_item_cat`
+        WHERE  id = #{id}
+    </select>
+    <!--添加-->
+    <insert id="add" parameterType="com.sqt.pojo.TbItemCat">
+        INSERT INTO `tb_item_cat` (
+              `parent_id`,
+              `name`,
+              `type_id`
+            )
+            VALUES
+              (
+                #{parentId},
+                #{name},
+                #{typeId}
+              );
+    </insert>
+
+    <!--更新-->
+    <update id="update" parameterType="com.sqt.pojo.TbItemCat">
+        UPDATE
+          `tb_item_cat`
+        SET
+          `parent_id` = #{parentId},
+          `name` = #{name},
+          `type_id` =  #{typeId}
+        WHERE `id` = #{id};
+    </update>
+</mapper>

@@ -1,9 +1,8 @@
-package com.sqt.goods.controller.item;
+package com.sqt.goods.controller.itemcat;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.sqt.entity.Result;
 import com.sqt.goods.service.item.ItemCatService;
-import com.sqt.pojo.TbItem;
 import com.sqt.pojo.TbItemCat;
 import java.util.List;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -64,5 +63,16 @@ public class ItemCatController {
             return new Result(404,"修改失败");
         }
         return new Result(200,"修改成功");
+    }
+
+    @RequestMapping("/findItemCatList")
+    public List<TbItemCat> findItemCatList(){
+        List<TbItemCat> itemCatList = null;
+        try {
+            itemCatList =  itemCatService.findAll();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return itemCatList;
     }
 }

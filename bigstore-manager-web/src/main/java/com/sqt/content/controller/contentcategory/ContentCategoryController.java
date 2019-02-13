@@ -4,7 +4,7 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.sqt.content.ContentCategoryService;
 import com.sqt.entity.PageData;
 import com.sqt.entity.Result;
-import com.sqt.pojo.TbContentCategory;
+import com.sqt.goods.pojo.TbContentCategory;
 import java.util.List;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;

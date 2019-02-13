@@ -2,10 +2,8 @@ package com.sqt.goods.service.item;
 
 import com.sqt.entity.PageData;
 import com.sqt.group.Goods;
-import com.sqt.pojo.TbGoods;
-import com.sqt.pojo.TbItem;
+import com.sqt.goods.pojo.TbGoods;
 import java.util.List;
-import java.util.Map;
 
 /**
  * 商品服务类
@@ -21,7 +19,7 @@ public interface GoodService {
      * @return
      * @throws Exception
      */
-    TbGoods findById(Long id) throws Exception;
+    Goods findById(Long id) throws Exception;
 
     /**
      * 查询所有商品列表

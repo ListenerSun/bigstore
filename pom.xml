@@ -17,6 +17,7 @@
 		<module>bigstore-shop-web</module>
 		<module>bigstore-content-intreface</module>
 		<module>bigstore-content-service</module>
+		<module>bigstore-website-web</module>
 	</modules>
 	<packaging>pom</packaging>
 
@@ -157,6 +158,26 @@
 		<version>1.18.2</version>
 		<scope>provided</scope>
 	</dependency>
+	<!--集成solr-->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-data-solr</artifactId>
+		<!--<exclusions>
+			<exclusion>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-data-solr</artifactId>
+			</exclusion>
+		</exclusions>-->
+		<version>1.5.9.RELEASE</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-solr -->
+	<!--<dependency>
+		<groupId>org.springframework.data</groupId>
+		<artifactId>spring-data-solr</artifactId>
+		<version>4.0.4.RELEASE</version>
+	</dependency>-->
+
 
 </dependencies>
 

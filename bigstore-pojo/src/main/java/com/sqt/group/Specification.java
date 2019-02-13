@@ -1,7 +1,7 @@
 package com.sqt.group;
 
-import com.sqt.pojo.TbSpecification;
-import com.sqt.pojo.TbSpecificationOption;
+import com.sqt.goods.pojo.TbSpecification;
+import com.sqt.goods.pojo.TbSpecificationOption;
 import java.io.Serializable;
 import java.util.List;
 

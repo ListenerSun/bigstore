@@ -5,12 +5,12 @@
 <mapper namespace="BrandMapper">
 
     <!--根据用户Id查询用户的角色-->
-    <select id="findById" resultType="com.sqt.pojo.TbBrand" parameterType="long">
+    <select id="findById" resultType="com.sqt.goods.pojo.TbBrand" parameterType="long">
         SELECT * FROM `tb_brand`
         WHERE id = #{id}
     </select>
     <!--查询符合条件所有商品品牌列表-->
-    <select id="findAll" resultType="com.sqt.pojo.TbBrand" parameterType="com.sqt.pojo.TbBrand">
+    <select id="findAll" resultType="com.sqt.goods.pojo.TbBrand" parameterType="com.sqt.goods.pojo.TbBrand">
         SELECT * FROM `tb_brand`
         where 1=1
         <if test="null != #{firstChar} ">
@@ -21,12 +21,12 @@
         </if>
     </select>
     <!--增加商品品牌-->
-    <insert id="add" parameterType="com.sqt.pojo.TbBrand">
+    <insert id="add" parameterType="com.sqt.goods.pojo.TbBrand">
         INSERT INTO `tb_brand` ( `name`, `first_char`)
         VALUES ( #{name}, #{firstChar});
     </insert>
     <!--更新商品品牌-->
-    <update id="edit"  parameterType="com.sqt.pojo.TbBrand">
+    <update id="edit"  parameterType="com.sqt.goods.pojo.TbBrand">
         UPDATE `tb_brand`
         SET  `name`=#{name}, `first_char`=#{firstChar}
         WHERE `id`=#{id};

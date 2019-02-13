@@ -5,17 +5,17 @@
 <mapper namespace="ContentMapper">
 
     <!--根据Id查询-->
-    <select id="findById" resultType="com.sqt.pojo.TbContent" parameterType="long">
+    <select id="findById" resultType="com.sqt.goods.pojo.TbContent" parameterType="long">
         SELECT * FROM `tb_content`
         WHERE id = #{id}
     </select>
     <!--根据categoryId查询-->
-    <select id="findByCategoryId" resultType="com.sqt.pojo.TbContent" parameterType="long">
+    <select id="findByCategoryId" resultType="com.sqt.goods.pojo.TbContent" parameterType="long">
         SELECT * FROM `tb_content`
         WHERE category_id = #{id}
     </select>
     <!--查询符合条件列表-->
-    <select id="findAll" resultType="com.sqt.pojo.TbContent" parameterType="com.sqt.pojo.TbContent">
+    <select id="findAll" resultType="com.sqt.goods.pojo.TbContent" parameterType="com.sqt.goods.pojo.TbContent">
         SELECT * FROM `tb_content`
         where 1=1
         <if test="null != #{title} ">
@@ -23,12 +23,12 @@
         </if>
     </select>
     <!--增加-->
-    <insert id="add" parameterType="com.sqt.pojo.TbContent">
+    <insert id="add" parameterType="com.sqt.goods.pojo.TbContent">
         INSERT INTO `tb_content` ( `title`,`category_id`, `url`,`pic`,`status`,`sort_order`)
         VALUES ( #{title},#{categoryId},#{url},#{pic},#{status},#{sortOrder});
     </insert>
     <!--更新-->
-    <update id="edit"  parameterType="com.sqt.pojo.TbContent">
+    <update id="edit"  parameterType="com.sqt.goods.pojo.TbContent">
         UPDATE `tb_content`
         SET `category_id` = #{categoryId}, `title`=#{title}, `url`=#{url},`pic`=#{pic},`status`=#{status},sort_order=#{sortOrder}
         WHERE `id`=#{id};

@@ -6,13 +6,13 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.sqt.entity.PageData;
 import com.sqt.goods.dao.DaoSupport;
+import com.sqt.goods.pojo.TbItem;
 import com.sqt.goods.service.item.GoodService;
 import com.sqt.group.Goods;
-import com.sqt.pojo.TbBrand;
-import com.sqt.pojo.TbGoods;
-import com.sqt.pojo.TbGoodsDesc;
-import com.sqt.pojo.TbItem;
-import com.sqt.pojo.TbItemCat;
+import com.sqt.goods.pojo.TbBrand;
+import com.sqt.goods.pojo.TbGoods;
+import com.sqt.goods.pojo.TbGoodsDesc;
+import com.sqt.goods.pojo.TbItemCat;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -33,8 +33,15 @@ public class GoodServiceImp implements GoodService {
     private DaoSupport dao;
 
     @Override
-    public TbGoods findById(Long id) throws Exception {
-        return null;
+    public Goods findById(Long id) throws Exception {
+        Goods goods = new Goods();
+        TbGoods good = (TbGoods) dao.findForObject("GoodMapper.findById",id);
+        TbGoodsDesc goodsDesc = (TbGoodsDesc)dao.findForObject("GoodsDescMapper.findById",id);
+        List<TbItem> itemList = (List<TbItem>) dao.findForList("ItemMapper.findByGoodsId",id);
+        goods.setGoods(good);
+        goods.setGoodsDesc(goodsDesc);
+        goods.setItemList(itemList);
+        return goods;
     }
 
     @Override
@@ -44,12 +51,18 @@ public class GoodServiceImp implements GoodService {
 
     @Override
     public PageData findPageData(int pageNum, int pageSize, TbGoods good) throws Exception {
-        return null;
+        PageHelper.startPage(pageNum, pageSize);//分页
+        List<TbGoods> list = (List<TbGoods>) dao.findForList("GoodMapper.findAll",good);
+        Page<TbGoods> page = (Page<TbGoods>) list;
+        return new PageData(page.getResult(),page.getTotal());
     }
 
     @Override
     public PageData findPageData(int pageNum, int pageSize) throws Exception {
-        return null;
+        PageHelper.startPage(pageNum, pageSize);//分页
+        List<TbGoods> list = (List<TbGoods>) dao.findForList("GoodMapper.findAll",null);
+        Page<TbGoods> page = (Page<TbGoods>) list;
+        return new PageData(page.getResult(),page.getTotal());
     }
 
     @Override
@@ -66,7 +79,7 @@ public class GoodServiceImp implements GoodService {
                 title += map.get(key);
             }
             item.setTitle(title);
-            item.setPrice(goods.getPrice());
+            item.setPrice(goods.getPrice().toString());
             // 保存三级分类的ID:
             item.setCategoryid(goods.getCategory3Id());
             item.setCreateTime(new Date());

@@ -1,8 +1,7 @@
 package com.sqt.goods.service.specification;
 import com.sqt.entity.PageData;
-import com.sqt.entity.Result;
 import com.sqt.group.Specification;
-import com.sqt.pojo.TbSpecification;
+import com.sqt.goods.pojo.TbSpecification;
 import java.util.List;
 import java.util.Map;
 
@@ -63,7 +62,8 @@ public interface SpecificationService {
 		throws Exception;
 
 	public List<Map> findSpecificationList() throws Exception;
-	
-	public List<Map> selectOptionList();
+
+	//根据typetemplateId查询option列表
+	public List<Map> findOptionListByTypeId(Long id) throws Exception;
 	
 }

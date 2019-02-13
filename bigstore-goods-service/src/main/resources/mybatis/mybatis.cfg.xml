@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<settings>
+		<!-- 开启驼峰映射 ，为自定义的SQL语句服务-->
+		<!--设置启用数据库字段下划线映射到java对象的驼峰式命名属性，默认为false-->
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	    <!--打印sql-->
+		<setting name="logImpl" value="STDOUT_LOGGING" />
+		<!--二级缓存开启-->
+		<!--<setting name="cacheEnabled" value="true" />-->
+	</settings>
+
+	<!-- 配置分页插件 -->
+	<!--<plugins>
+		<plugin interceptor="com.github.pagehelper.PageHelper">
+			&lt;!&ndash; 设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库&ndash;&gt;
+			<property name="dialect" value="mysql"/>
+		</plugin>
+	</plugins>-->
+</configuration>
+

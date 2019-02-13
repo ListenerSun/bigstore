@@ -3,7 +3,8 @@
 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="ItemMapper">
-	<insert id="add" parameterType="com.sqt.pojo.TbItem">
+	<!--添加商品sku信息-->
+	<insert id="add" parameterType="com.sqt.goods.entity.TbItem">
 		 insert into tb_item ( title, sell_point,
 	      price, stock_count, num,
 	      barcode, image, categoryId,
@@ -21,4 +22,13 @@
 	      #{cartThumbnail,jdbcType=VARCHAR}, #{category,jdbcType=VARCHAR}, #{brand,jdbcType=VARCHAR},
 	      #{spec,jdbcType=VARCHAR}, #{seller,jdbcType=VARCHAR})
 	</insert>
+	<!--根据商品id查询sku列表信息-->
+	<select id="findByGoodsId" parameterType="long" resultType="com.sqt.goods.entity.TbItem">
+		SELECT * from tb_item WHERE goods_id = #{id}
+	</select>
+	<!--查询所有-->
+	<select id="findAll"  resultType="com.sqt.goods.entity.TbItem">
+		select id,title,price,image,category,brand,seller,spec from tb_item
+	</select>
+
 </mapper>

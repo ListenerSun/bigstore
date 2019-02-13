@@ -6,7 +6,7 @@ import com.github.pagehelper.PageHelper;
 import com.sqt.entity.PageData;
 import com.sqt.goods.dao.DaoSupport;
 import com.sqt.goods.service.typetemplate.TypeTemplateService;
-import com.sqt.pojo.TbTypeTemplate;
+import com.sqt.goods.pojo.TbTypeTemplate;
 import java.util.List;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Component;

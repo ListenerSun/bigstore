@@ -1,7 +1,7 @@
 package com.sqt.goods.service.typetemplate;
 
 import com.sqt.entity.PageData;
-import com.sqt.pojo.TbTypeTemplate;
+import com.sqt.goods.pojo.TbTypeTemplate;
 import java.util.List;
 
 /**

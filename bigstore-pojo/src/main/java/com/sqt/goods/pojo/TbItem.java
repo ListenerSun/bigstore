@@ -1,0 +1,272 @@
+package com.sqt.goods.pojo;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.Map;
+import org.apache.solr.client.solrj.beans.Field;
+import org.springframework.data.solr.core.mapping.Dynamic;
+
+public class TbItem implements Serializable{
+
+    @Field("item_goodsid")
+    private Long id;
+    @Field("item_title")
+    private String title;
+
+    private String sellPoint;
+
+    @Field("item_price")
+    private String price;
+
+    private Integer stockCount;
+
+    private Integer num;
+
+    private String barcode;
+
+    @Field("item_image")
+    private String image;
+
+    private Long categoryid;
+
+    private String status;
+
+    private Date createTime;
+
+    private Date updateTime;
+
+    private String itemSn;
+
+    private String costPirce;
+
+    private String marketPrice;
+
+    private String isDefault;
+
+    private Long goodsId;
+
+    private String sellerId;
+
+    private String cartThumbnail;
+
+    @Field("item_categoty")
+    private String category;
+
+    @Field("item_brand")
+    private String brand;
+
+    private String spec;
+
+    @Field("item_seller")
+    private String seller;
+
+
+    @Field("item_spec_*")
+    @Dynamic
+    private Map<String,String> specMap;
+
+    public TbItem(Long id, String title, String price, String image, Long categoryid,String brand,
+        String seller) {
+        this.id = id;
+        this.title = title;
+        this.price = price;
+        this.image = image;
+        this.categoryid = categoryid;
+        this.seller = seller;
+    }
+
+    public TbItem() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getSellPoint() {
+        return sellPoint;
+    }
+
+    public void setSellPoint(String sellPoint) {
+        this.sellPoint = sellPoint;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public Integer getStockCount() {
+        return stockCount;
+    }
+
+    public void setStockCount(Integer stockCount) {
+        this.stockCount = stockCount;
+    }
+
+    public Integer getNum() {
+        return num;
+    }
+
+    public void setNum(Integer num) {
+        this.num = num;
+    }
+
+    public String getBarcode() {
+        return barcode;
+    }
+
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public Long getCategoryid() {
+        return categoryid;
+    }
+
+    public void setCategoryid(Long categoryid) {
+        this.categoryid = categoryid;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public String getItemSn() {
+        return itemSn;
+    }
+
+    public void setItemSn(String itemSn) {
+        this.itemSn = itemSn;
+    }
+
+    public String getCostPirce() {
+        return costPirce;
+    }
+
+    public void setCostPirce(String costPirce) {
+        this.costPirce = costPirce;
+    }
+
+    public String getMarketPrice() {
+        return marketPrice;
+    }
+
+    public void setMarketPrice(String marketPrice) {
+        this.marketPrice = marketPrice;
+    }
+
+    public String getIsDefault() {
+        return isDefault;
+    }
+
+    public void setIsDefault(String isDefault) {
+        this.isDefault = isDefault;
+    }
+
+    public Long getGoodsId() {
+        return goodsId;
+    }
+
+    public void setGoodsId(Long goodsId) {
+        this.goodsId = goodsId;
+    }
+
+    public String getSellerId() {
+        return sellerId;
+    }
+
+    public void setSellerId(String sellerId) {
+        this.sellerId = sellerId;
+    }
+
+    public String getCartThumbnail() {
+        return cartThumbnail;
+    }
+
+    public void setCartThumbnail(String cartThumbnail) {
+        this.cartThumbnail = cartThumbnail;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getSpec() {
+        return spec;
+    }
+
+    public void setSpec(String spec) {
+        this.spec = spec;
+    }
+
+    public String getSeller() {
+        return seller;
+    }
+
+    public void setSeller(String seller) {
+        this.seller = seller;
+    }
+
+    public Map<String, String> getSpecMap() {
+        return specMap;
+    }
+
+    public void setSpecMap(Map<String, String> specMap) {
+        this.specMap = specMap;
+    }
+}

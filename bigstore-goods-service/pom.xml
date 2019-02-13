@@ -56,16 +56,21 @@
 		<dependency>
 			<groupId>com.alibaba.boot</groupId>
 			<artifactId>dubbo-spring-boot-starter</artifactId>
-			<exclusions>
+			<!--<exclusions>
 				<exclusion>
 					<groupId>com.alibaba</groupId>
 					<artifactId>dubbo</artifactId>
 				</exclusion>
-			</exclusions>
+			</exclusions>-->
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
+		</dependency>
+		<!-- Spring Context Extras -->
+		<dependency>
+			<groupId>com.alibaba.spring</groupId>
+			<artifactId>spring-context-support</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.zookeeper</groupId>
@@ -76,13 +81,31 @@
 			<artifactId>zkclient</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+		</dependency>
 		<!-- 修改后立即生效，热部署 -->
 		<dependency>
 			<groupId> org.springframework.boot </groupId>
 			<artifactId> spring-boot-devtools </artifactId>
 			<optional> true </optional>
 		</dependency>
-
+		<!--solr依赖-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-solr</artifactId>
+		</dependency>
+		<!--<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-solr</artifactId>
+		</dependency>
+-->
+		<!-- 添加jpa依赖-->
+	<!--	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>-->
 		<!--其他模块的依赖-->
 		<dependency>
 			<groupId>com.sqt</groupId>

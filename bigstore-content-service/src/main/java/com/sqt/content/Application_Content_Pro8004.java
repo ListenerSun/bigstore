@@ -1,7 +1,6 @@
 package com.sqt.content;
 
 import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
-import com.sqt.content.config.PictureConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

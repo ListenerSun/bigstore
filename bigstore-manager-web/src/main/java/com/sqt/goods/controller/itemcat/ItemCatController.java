@@ -3,7 +3,7 @@ package com.sqt.goods.controller.itemcat;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.sqt.entity.Result;
 import com.sqt.goods.service.item.ItemCatService;
-import com.sqt.pojo.TbItemCat;
+import com.sqt.goods.pojo.TbItemCat;
 import java.util.List;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

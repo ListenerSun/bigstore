@@ -1,8 +1,8 @@
 package com.sqt.goods.service.item;
 
 import com.sqt.entity.PageData;
-import com.sqt.pojo.TbItem;
-import com.sqt.pojo.TbItemCat;
+import com.sqt.goods.pojo.TbItem;
+import com.sqt.goods.pojo.TbItemCat;
 import java.util.List;
 
 /**

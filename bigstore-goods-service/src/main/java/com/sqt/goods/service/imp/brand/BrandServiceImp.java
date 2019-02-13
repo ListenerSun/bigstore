@@ -6,7 +6,7 @@ import com.github.pagehelper.PageHelper;
 import com.sqt.entity.PageData;
 import com.sqt.goods.dao.DaoSupport;
 import com.sqt.goods.service.brand.BrandService;
-import com.sqt.pojo.TbBrand;
+import com.sqt.goods.pojo.TbBrand;
 import java.util.List;
 import java.util.Map;
 import javax.annotation.Resource;

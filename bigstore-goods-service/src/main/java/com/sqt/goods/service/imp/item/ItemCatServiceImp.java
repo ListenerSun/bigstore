@@ -3,9 +3,9 @@ package com.sqt.goods.service.imp.item;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.sqt.entity.PageData;
 import com.sqt.goods.dao.DaoSupport;
+import com.sqt.goods.pojo.TbItem;
 import com.sqt.goods.service.item.ItemCatService;
-import com.sqt.pojo.TbItem;
-import com.sqt.pojo.TbItemCat;
+import com.sqt.goods.pojo.TbItemCat;
 import java.util.List;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Component;
@@ -29,7 +29,7 @@ public class ItemCatServiceImp  implements ItemCatService{
 
     @Override
     public List<TbItemCat> findAll() throws Exception {
-        return null;
+        return (List<TbItemCat>) dao.findForList("ItemCatMapper.findAll",null);
     }
 
     @Override

@@ -7,7 +7,7 @@ import com.github.pagehelper.PageHelper;
 import com.sqt.content.ContentCategoryService;
 import com.sqt.content.dao.DaoSupport;
 import com.sqt.entity.PageData;
-import com.sqt.pojo.TbContentCategory;
+import com.sqt.goods.pojo.TbContentCategory;
 import java.util.List;
 import java.util.Map;
 import javax.annotation.Resource;

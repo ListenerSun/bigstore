@@ -1,9 +1,7 @@
 package com.sqt.goods.service.seller;
 
 import com.sqt.entity.PageData;
-import com.sqt.entity.Result;
-import com.sqt.pojo.TbSeller;
-import java.util.List;
+import com.sqt.goods.pojo.TbSeller;
 
 /**
  * @Description:

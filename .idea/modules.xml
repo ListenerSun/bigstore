@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/bigstore-common/bigstore-common.iml" filepath="$PROJECT_DIR$/bigstore-common/bigstore-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bigstore-content-intreface/bigstore-content-intreface.iml" filepath="$PROJECT_DIR$/bigstore-content-intreface/bigstore-content-intreface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bigstore-content-service/bigstore-content-service.iml" filepath="$PROJECT_DIR$/bigstore-content-service/bigstore-content-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigstore-dao/bigstore-dao.iml" filepath="$PROJECT_DIR$/bigstore-dao/bigstore-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigstore-goods-interface/bigstore-goods-interface.iml" filepath="$PROJECT_DIR$/bigstore-goods-interface/bigstore-goods-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigstore-goods-service/bigstore-goods-service.iml" filepath="$PROJECT_DIR$/bigstore-goods-service/bigstore-goods-service.iml" />
@@ -10,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/bigstore-parent.iml" filepath="$PROJECT_DIR$/bigstore-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigstore-pojo/bigstore-pojo.iml" filepath="$PROJECT_DIR$/bigstore-pojo/bigstore-pojo.iml" />
       <module fileurl="file://$PROJECT_DIR$/bigstore-shop-web/bigstore-shop-web.iml" filepath="$PROJECT_DIR$/bigstore-shop-web/bigstore-shop-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bigstore-website-web/bigstore-website-web.iml" filepath="$PROJECT_DIR$/bigstore-website-web/bigstore-website-web.iml" />
     </modules>
   </component>
 </project>

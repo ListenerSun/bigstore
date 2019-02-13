@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="TypeTemplateMapper">
+
+    <!--根据用户Id查询用户的角色-->
+    <select id="findById" resultType="com.sqt.goods.pojo.TbTypeTemplate" parameterType="long">
+        SELECT * FROM `tb_type_template`
+        WHERE id = #{id}
+    </select>
+    <!--查询符合条件所有模板规格列表-->
+    <select id="findAll" resultType="com.sqt.goods.pojo.TbTypeTemplate" parameterType="com.sqt.goods.pojo.TbTypeTemplate">
+        SELECT
+            `id`,
+            `name`,
+            `spec_ids`,
+            `brand_ids`,
+            `custom_attribute_items`
+        FROM
+            `tb_type_template`
+    </select>
+    <!--增加模板规格-->
+    <insert id="add" parameterType="com.sqt.goods.pojo.TbTypeTemplate">
+        INSERT INTO `tb_type_template` ( `name`, `spec_ids`, `brand_ids`, `custom_attribute_items`)
+        VALUES ( #{name}, #{specIds},#{brandIds},#{customAttributeItems});
+    </insert>
+    <!--更新模板规格-->
+    <update id="edit"  parameterType="com.sqt.goods.pojo.TbTypeTemplate">
+        UPDATE `tb_type_template`
+        SET  `name`=#{name}, `spec_ids`=#{specIds},`brand_ids`=#{brandIds},`custom_attribute_items`=#{customAttributeItems}
+        WHERE `id`=#{id};
+    </update>
+    <!--删除模板规格-->
+    <delete id="delete" parameterType="long">
+        DELETE FROM `tb_type_template`
+        WHERE `id` = #{id};
+    </delete>
+
+</mapper>

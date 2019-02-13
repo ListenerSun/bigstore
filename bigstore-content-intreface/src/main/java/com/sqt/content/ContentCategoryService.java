@@ -1,7 +1,7 @@
 package com.sqt.content;
 
 import com.sqt.entity.PageData;
-import com.sqt.pojo.TbContentCategory;
+import com.sqt.goods.pojo.TbContentCategory;
 import java.util.List;
 
 /**

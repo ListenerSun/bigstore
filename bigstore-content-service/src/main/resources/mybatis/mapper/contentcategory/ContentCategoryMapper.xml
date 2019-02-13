@@ -5,12 +5,12 @@
 <mapper namespace="ContentCategoryMapper">
 
     <!--根据id查询-->
-    <select id="findById" resultType="com.sqt.pojo.TbContentCategory" parameterType="long">
+    <select id="findById" resultType="com.sqt.goods.pojo.TbContentCategory" parameterType="long">
         SELECT * FROM `tb_content_category`
         WHERE id = #{id}
     </select>
     <!--查询符合条件列表-->
-    <select id="findAll" resultType="com.sqt.pojo.TbContentCategory" parameterType="com.sqt.pojo.TbContentCategory">
+    <select id="findAll" resultType="com.sqt.goods.pojo.TbContentCategory" parameterType="com.sqt.goods.pojo.TbContentCategory">
         SELECT * FROM `tb_content_category`
         WHERE 1=1
         <if test="null != #{name}  ">
@@ -18,12 +18,12 @@
         </if>
     </select>
     <!--增加-->
-    <insert id="add" parameterType="com.sqt.pojo.TbContentCategory">
+    <insert id="add" parameterType="com.sqt.goods.pojo.TbContentCategory">
         INSERT INTO `tb_content_category` ( `name`)
         VALUES ( #{name});
     </insert>
     <!--更新-->
-    <update id="edit"  parameterType="com.sqt.pojo.TbContentCategory">
+    <update id="edit"  parameterType="com.sqt.goods.pojo.TbContentCategory">
         UPDATE `tb_content_category`
         SET  `name`=#{name}
         WHERE `id`=#{id};

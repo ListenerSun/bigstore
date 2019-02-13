@@ -1,8 +1,8 @@
 package com.sqt.group;
 
-import com.sqt.pojo.TbGoods;
-import com.sqt.pojo.TbGoodsDesc;
-import com.sqt.pojo.TbItem;
+import com.sqt.goods.pojo.TbGoods;
+import com.sqt.goods.pojo.TbGoodsDesc;
+import com.sqt.goods.pojo.TbItem;
 import java.io.Serializable;
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.sqt.goods.service.brand;
 
 import com.sqt.entity.PageData;
-import com.sqt.pojo.TbBrand;
+import com.sqt.goods.pojo.TbBrand;
 import java.util.List;
 import java.util.Map;
 

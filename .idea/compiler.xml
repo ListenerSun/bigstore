@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="bigstore-common" />
+        <module name="bigstore-content-intreface" />
+        <module name="bigstore-content-service" />
         <module name="bigstore-dao" />
         <module name="bigstore-goods-dao" />
         <module name="bigstore-goods-interface" />
@@ -14,10 +16,13 @@
         <module name="bigstore-manager-web" />
         <module name="bigstore-pojo" />
         <module name="bigstore-shop-web" />
+        <module name="bigstore-website-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bigstore-common" target="1.8" />
+      <module name="bigstore-content-intreface" target="1.8" />
+      <module name="bigstore-content-service" target="1.8" />
       <module name="bigstore-dao" target="1.8" />
       <module name="bigstore-goods-dao" target="1.8" />
       <module name="bigstore-goods-interface" target="1.8" />
@@ -26,6 +31,7 @@
       <module name="bigstore-parent" target="1.8" />
       <module name="bigstore-pojo" target="1.8" />
       <module name="bigstore-shop-web" target="1.8" />
+      <module name="bigstore-website-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

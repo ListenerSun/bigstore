@@ -3,8 +3,8 @@
 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="GoodsDescMapper">
-	<!--增加商品品牌-->
-	<insert id="add" parameterType="com.sqt.pojo.TbGoods" >
+	<!--增加商品描述-->
+	<insert id="add" parameterType="com.sqt.goods.pojo.TbGoodsDesc" >
 		INSERT INTO `bigstore`.`tb_goods_desc` (
 			`goods_id`,
 			`introduction`,
@@ -16,4 +16,8 @@
 		VALUES(#{goodsId},#{introduction},#{specificationItems},#{customAttributeItems},
 				#{itemImages},#{packageList},#{saleService})
 	</insert>
+	<!--根据商品id查询描述-->
+	<select id="findById" parameterType="long" resultType="com.sqt.goods.pojo.TbGoodsDesc">
+		SELECT * FROM `tb_goods_desc` WHERE goods_id = #{id};
+	</select>
 </mapper>

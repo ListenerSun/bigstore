@@ -4,7 +4,7 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.sqt.entity.PageData;
 import com.sqt.entity.Result;
 import com.sqt.goods.service.typetemplate.TypeTemplateService;
-import com.sqt.pojo.TbTypeTemplate;
+import com.sqt.goods.pojo.TbTypeTemplate;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

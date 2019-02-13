@@ -4,7 +4,7 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.sqt.entity.PageData;
 import com.sqt.entity.Result;
 import com.sqt.goods.service.brand.BrandService;
-import com.sqt.pojo.TbBrand;
+import com.sqt.goods.pojo.TbBrand;
 import java.util.List;
 import java.util.Map;
 import org.springframework.web.bind.annotation.PathVariable;

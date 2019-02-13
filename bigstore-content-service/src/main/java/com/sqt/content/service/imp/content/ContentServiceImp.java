@@ -1,15 +1,13 @@
 package com.sqt.content.service.imp.content;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.sqt.content.ContentService;
 import com.sqt.content.dao.DaoSupport;
 import com.sqt.content.utils.RedisUtil;
 import com.sqt.entity.PageData;
-import com.sqt.pojo.TbContent;
+import com.sqt.goods.pojo.TbContent;
 import java.io.File;
 import java.util.List;
 import javax.annotation.Resource;
@@ -63,11 +61,17 @@ public class ContentServiceImp implements ContentService {
     @Override
     public void add(TbContent content) throws Exception {
         dao.save("ContentMapper.add",content);
+        if(redisUtil.exists("contentList")){
+            redisUtil.remove("contentList");
+        }
     }
 
     @Override
     public void update(TbContent content) throws Exception {
         dao.update("ContentMapper.edit",content);
+        if(redisUtil.exists("contentList")){
+            redisUtil.remove("contentList");
+        }
     }
 
     @Override
@@ -84,6 +88,9 @@ public class ContentServiceImp implements ContentService {
                 pictureFile.delete();//删除本地图片
             }
             dao.delete("ContentMapper.delete",id);
+        }
+        if(redisUtil.exists("contentList")){
+            redisUtil.remove("contentList");
         }
     }
 

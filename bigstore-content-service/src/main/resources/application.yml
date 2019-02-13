@@ -1,0 +1,29 @@
+#server:
+#  port: 8001
+#  servlet:
+#    context-path: /bigstoregood # 2.x 版本
+#
+#mybatis:
+#  config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
+#  type-aliases-package: com.sqt.pojo                         # 所有pojo别名类所在包
+#  mapper-locations: classpath:mybatis/mapper/**/*.xml       # mapper映射文件
+#
+#spring:
+#   datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+#    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
+#    url: jdbc:mysql://localhost:3306/bigstore              # 数据库名称
+#    username: root
+#    password: root
+#   dubbo:
+#      application:
+#        name: bigstore-goods-service
+#      registry:
+#        address: zookeeper://132.232.13.29:2181
+#      protocol:
+#        name: dubbo
+#        prot: 20880
+#      scan:
+#        base-packages: com.sqt.goods.service.imp
+#
+#

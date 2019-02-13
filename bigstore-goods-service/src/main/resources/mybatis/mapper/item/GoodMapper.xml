@@ -4,7 +4,7 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="GoodMapper">
 	<!--新增商品品牌-->
-	<insert id="add" parameterType="com.sqt.pojo.TbGoods" useGeneratedKeys="true" keyProperty="id">
+	<insert id="add" parameterType="com.sqt.goods.pojo.TbGoods" useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO `tb_goods` (
 			  `seller_id`,
 			  `goods_name`,
@@ -41,9 +41,8 @@
 			    #{isDelete}
 			  );
 	</insert>
-
 	<!--查询商品列表 -->
-	<select id="findAll" resultType="com.sqt.pojo.TbGoods" parameterType="com.sqt.pojo.TbGoods">
+	<select id="findAll" resultType="com.sqt.goods.pojo.TbGoods" parameterType="com.sqt.goods.pojo.TbGoods">
 		SELECT  * from `tb_goods`
 		WHERE  1=1
 		<if test="null != goodsName and '' != goodsName" >
@@ -52,5 +51,9 @@
 		<if test="null != auditStatus and '' != auditStatus"  >
 			AND audit_status = CONCAT(CONCAT('%',#{auditStatus}),'%')
 		</if>
+	</select>
+	<!--查询单个商品-->
+	<select id="findById" parameterType="long" resultType="com.sqt.goods.pojo.TbGoods">
+		SELECT * FROM `tb_goods` WHERE  id = #{id}
 	</select>
 </mapper>

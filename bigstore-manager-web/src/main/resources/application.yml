@@ -1,0 +1,14 @@
+## 控制台打印输出自动配置类和非自动配置类
+#debug: true
+#
+## ============================== 配置默认的开发模式 ==============================
+## 【1】配置文件配置
+#spring:
+#  profiles:
+#    active: dev # 使用开发环境的配置文件
+#
+## 【2】运行jar包的时候添加参数
+## java -jar springboot-study-0.01-SNAPSHOT.jar --spring.profiles.active=dev
+#
+## 【3】虚拟机参数
+## -Dspring.profiles.active=dev

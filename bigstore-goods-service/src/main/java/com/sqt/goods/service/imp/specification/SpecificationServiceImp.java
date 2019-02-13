@@ -1,14 +1,16 @@
 package com.sqt.goods.service.imp.specification;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.sqt.entity.PageData;
 import com.sqt.goods.dao.DaoSupport;
 import com.sqt.goods.service.specification.SpecificationService;
 import com.sqt.group.Specification;
-import com.sqt.pojo.TbSpecification;
-import com.sqt.pojo.TbSpecificationOption;
+import com.sqt.goods.pojo.TbSpecification;
+import com.sqt.goods.pojo.TbSpecificationOption;
+import com.sqt.goods.pojo.TbTypeTemplate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -135,7 +137,17 @@ public class SpecificationServiceImp implements SpecificationService {
     }
 
     @Override
-    public List<Map> selectOptionList() {
-        return null;
+    public  List<Map> findOptionListByTypeId(Long id) throws Exception {
+        TbTypeTemplate typeTemplate = (TbTypeTemplate) dao.findForObject("TypeTemplateMapper.findById", id);
+        List<Map> specMaps = JSON.parseArray(typeTemplate.getSpecIds(), Map.class);
+        for (Map specMap : specMaps) {
+            new Long(Integer.parseInt(specMap.get("id").toString()));
+            Object id1 = dao.findForList("SpecificationOptionMapper.selectOptionList", new Long(Integer.parseInt(specMap.get("id").toString())));
+
+            specMap.put("options",id1);
+        }
+
+        return specMaps;
     }
+
 }
